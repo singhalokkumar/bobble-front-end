@@ -1,13 +1,94 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang = "en">
 <head>
-  <meta charset="utf-8">
-  <title>Bobble</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobble-SignUp</title>
+    <meta name="google-signin-client_id" content="643563945064-ietj6vvf5gkiuisu9aj45oqsmkmn3hai.apps.googleusercontent.com">
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="src/styles.scss" rel="stylesheet" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script>
+      window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  
+  function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+</script>
 </head>
 <body>
-  <app-root></app-root>
+    <div class="container"> 
+        <div class="row">
+            <div class="col-12 justify-content center brand">
+                <img src="assets/images/footer-logo.jpeg">
+            </div>
+        </div>
+        <div class="row justify-content-center">
+        <div class="card my-5 col-12 col-sm-10 col-md-8 col-lg-6">
+        <article class="card-body mx-auto">
+            <p class="font-weight-bold text-center">SIGN UP</p><br>
+            <h1 class="card-title mt-3 text-center font-weight-normal">Create Your Account</h1>
+            <p class="text-center">lorep ipsum lorep ipsum lorep ipsum</p>
+            <div class="row justify-content-center">
+              <div class="g-signin2" data-width="200" data-height="39" data-longtitle="true"></div>
+                <!-- <a href="" class="btn btn-block btn-twitter  col-12 col-md-6 mt-0 text-dark"> <img src="https://img.icons8.com/color/48/000000/google-logo.png" style="height:25px;width:25px;"/>Signup with Google</a> -->
+                <a href="www.facebook.com" class="btn btn-block btn-facebook col-12 col-md-6 mt-0 text-dark "> <img src="https://img.icons8.com/color/48/000000/facebook.png" style="height:25px;width:25px;"/>Signup with Fcebook</a>
+            </div>
+            <p class="divider-text">
+                <span class="bg-light">OR</span>
+            </p>
+            <form>
+            <div class="form-group input-group">
+                <input name="" class="form-control" placeholder="First name" type="text">
+            </div>
+            <div class="form-group input-group">
+                <input name="" class="form-control" placeholder="Last name" type="text">
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <input name="" class="form-control" placeholder="Email address" type="email">
+            </div> <!-- form-group// -->
+            
+            <div class="form-group input-group">
+                <input class="form-control" placeholder="Create password" type="password">
+            </div> <!-- form-group// --> 
+            <p class="text-center"><small>By clicking Sign Up, you agree to our <span class="text-primary">Terms of Use</span> and our <span  class="text-primary">Privacy Policy.</span> </small></p>                                                                                  
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+            </div> <!-- form-group// -->      
+                               
+        </form>
+        </article>
+        </div> <!-- card.// -->
+       </div>
+        
+        </div> 
+        <!--container end.//-->
+        
+        <br><br>
+       
 </body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </html>
